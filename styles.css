@@ -663,3 +663,120 @@ body::after {
     .stats-container { flex-direction: column; gap: 2rem; padding: 2rem; }
     .stat-divider { width: 100px; height: 1px; }
 }
+
+/* Dedicated App Page Styles */
+.app-hero {
+    padding: 12rem 2rem 6rem; /* Increased top padding for fixed navbar */
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.app-hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.app-feature-graphic {
+    max-width: 900px;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px -12px rgba(0,0,0,0.2);
+    margin-bottom: 4rem;
+    border: 8px solid white;
+}
+
+.app-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, var(--text-heading), var(--primary-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+    font-size: 1.4rem;
+    color: var(--text-body);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .hero-desc {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-heading);
+}
+
+@media (max-width: 768px) {
+    .app-hero { padding: 8rem 1.5rem 4rem; }
+    .app-hero h1 { font-size: 2.5rem; }
+    .app-feature-graphic { margin-bottom: 2rem; }
+    .feature-grid { padding: 2rem 1rem; }
+    .feature-item { padding: 2rem 1.5rem; }
+}
+
+/* App CTA Section */
+.app-cta-section {
+    background: white;
+    margin: 4rem auto;
+    max-width: 1100px;
+    width: calc(100% - 4rem);
+    border-radius: 40px;
+    border: 1px solid var(--card-border);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .app-cta-section {
+        margin: 2rem auto;
+        padding: 3rem 1.5rem;
+        width: calc(100% - 2rem);
+    }
+    .app-cta-section h2 { font-size: 2.2rem; }
+}
